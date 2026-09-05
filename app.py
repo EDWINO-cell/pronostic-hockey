@@ -12,8 +12,8 @@ jour, peu importe le nombre de visiteurs.
 import streamlit as st
 from datetime import datetime, timezone, timedelta
 
-from connectors.highlightly import HighlightlyClient
-from model.poisson import (
+from highlightly import HighlightlyClient
+from poisson import (
     compute_league_average, compute_team_strengths,
     compute_expected_goals, score_probability_matrix, summarize_predictions,
 )
