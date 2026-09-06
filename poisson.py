@@ -6,8 +6,8 @@ from scipy.stats import poisson
 HOME_ADVANTAGE = 1.09
 FORM_WEIGHT = 0.0
 REST_PENALTY = 0.0
-H2H_BLEND_WEIGHT = 0.15  # poids du face-à-face dans le mélange final des probabilités
-H2H_MIN_GAMES = 3        # nombre minimum de confrontations directes pour appliquer le blend
+H2H_BLEND_WEIGHT = 0.15
+H2H_MIN_GAMES = 3
 
 
 def compute_league_average(all_team_stats):
@@ -119,11 +119,8 @@ def blend_with_h2h(pred, h2h_home_win_pct, h2h_games_count,
     if h2h_home_win_pct is None or h2h_games_count < min_games:
         return pred
 
-    # h2h_home_win_pct est un taux de victoire brut (pas de distinction nul/défaite ici),
-    # on l'utilise pour tirer légèrement home_win_pct vers ce taux historique.
     blended_home = (1 - weight) * pred["home_win_pct"] + weight * h2h_home_win_pct
     delta = blended_home - pred["home_win_pct"]
-    # on retire la moitié du delta à chacun des deux autres pour rester normalisé
     blended_away = pred["away_win_pct"] - delta / 2
     blended_draw = pred["draw_pct"] - delta / 2
 
@@ -132,4 +129,3 @@ def blend_with_h2h(pred, h2h_home_win_pct, h2h_games_count,
     pred["away_win_pct"] = round(max(blended_away, 0), 4)
     pred["draw_pct"] = round(max(blended_draw, 0), 4)
     return pred
-  
