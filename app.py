@@ -172,9 +172,11 @@ with tab_upcoming:
             match_date = datetime.fromisoformat(m["date"].replace("Z", "+00:00"))
             st.subheader(f"{home['displayName']} vs {away['displayName']}")
             st.caption(match_date.strftime("%d %B %Y"))
-            features = load_features(home["id"], away["id"])
-            pred = predict(home["id"], away["id"], team_stats, features)
-            render_prediction(home["displayName"], away["displayName"], pred, features)
+            # Pas de forme récente / face-à-face ici : en pleine saison, le nombre de
+            # matchs à venir peut dépasser le quota API si on calcule ces features pour
+            # chacun automatiquement. Réservé au comparateur manuel (à la demande).
+            pred = predict(home["id"], away["id"], team_stats, features={})
+            render_prediction(home["displayName"], away["displayName"], pred, features={})
             st.divider()
 
 with tab_manual:
@@ -191,4 +193,4 @@ with tab_manual:
         features = load_features(team_options[home_name], team_options[away_name])
         pred = predict(team_options[home_name], team_options[away_name], team_stats, features)
         render_prediction(home_name, away_name, pred, features)
-                                                
+    
