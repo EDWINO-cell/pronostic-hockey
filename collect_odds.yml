@@ -1,0 +1,34 @@
+name: Collecte quotidienne des cotes NHL
+
+on:
+  schedule:
+    - cron: "0 15 * * *"   # tous les jours à 15:00 UTC, avant les matchs du soir
+  workflow_dispatch:        # permet aussi de le lancer à la main pour tester
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Collecter les cotes
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/collect_odds.py
+
+      - name: Enregistrer le journal
+        run: |
+          git config user.name "odds-bot"
+          git config user.email "odds-bot@users.noreply.github.com"
+          git add data/odds_log.json
+          git commit -m "Cotes du jour" || echo "Rien à enregistrer"
+          git push
