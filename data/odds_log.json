@@ -2846,6 +2846,97 @@
    "n_bookmakers": 5,
    "our_home_prob": null,
    "actual_result": null
+  },
+  {
+   "event_id": "d2834086e817eeb75c1ea2cd312f62c5",
+   "collected_at": "2026-11-15T20:13:52+00:00",
+   "collected_date": "2026-11-15",
+   "commence_time": "2026-11-16T00:40:00Z",
+   "home_team": "Philadelphia Flyers",
+   "away_team": "Edmonton Oilers",
+   "market_home_prob": 0.4311,
+   "market_away_prob": 0.5689,
+   "n_bookmakers": 9,
+   "our_home_prob": null,
+   "actual_result": null
+  },
+  {
+   "event_id": "539a387d9fd0da9af213bf8002fdb0d4",
+   "collected_at": "2026-11-15T20:13:52+00:00",
+   "collected_date": "2026-11-15",
+   "commence_time": "2026-11-16T01:10:00Z",
+   "home_team": "Anaheim Ducks",
+   "away_team": "Calgary Flames",
+   "market_home_prob": 0.5813,
+   "market_away_prob": 0.4187,
+   "n_bookmakers": 9,
+   "our_home_prob": null,
+   "actual_result": null
+  },
+  {
+   "event_id": "edbb603c4a7ed77b892f7bba6dcef824",
+   "collected_at": "2026-11-15T20:13:52+00:00",
+   "collected_date": "2026-11-15",
+   "commence_time": "2026-11-16T01:10:00Z",
+   "home_team": "Dallas Stars",
+   "away_team": "Florida Panthers",
+   "market_home_prob": 0.5471,
+   "market_away_prob": 0.4529,
+   "n_bookmakers": 9,
+   "our_home_prob": null,
+   "actual_result": null
+  },
+  {
+   "event_id": "e52a5926735bcff42d3d0ce052a21938",
+   "collected_at": "2026-11-15T20:13:52+00:00",
+   "collected_date": "2026-11-15",
+   "commence_time": "2026-11-16T02:10:00Z",
+   "home_team": "San Jose Sharks",
+   "away_team": "Nashville Predators",
+   "market_home_prob": 0.3932,
+   "market_away_prob": 0.6068,
+   "n_bookmakers": 9,
+   "our_home_prob": null,
+   "actual_result": null
+  },
+  {
+   "event_id": "c4ac537963707b247ad9e4eab06c15de",
+   "collected_at": "2026-11-15T20:13:52+00:00",
+   "collected_date": "2026-11-15",
+   "commence_time": "2026-11-16T02:10:00Z",
+   "home_team": "Vegas Golden Knights",
+   "away_team": "Vancouver Canucks",
+   "market_home_prob": 0.7763,
+   "market_away_prob": 0.2237,
+   "n_bookmakers": 9,
+   "our_home_prob": null,
+   "actual_result": null
+  },
+  {
+   "event_id": "2ef747b5f529d07b71843f1b5240eb38",
+   "collected_at": "2026-11-15T20:13:52+00:00",
+   "collected_date": "2026-11-15",
+   "commence_time": "2026-11-17T00:30:00Z",
+   "home_team": "New York Rangers",
+   "away_team": "Montréal Canadiens",
+   "market_home_prob": 0.5022,
+   "market_away_prob": 0.4978,
+   "n_bookmakers": 7,
+   "our_home_prob": null,
+   "actual_result": null
+  },
+  {
+   "event_id": "f5973475196770206d4e81300ca54634",
+   "collected_at": "2026-11-15T20:13:52+00:00",
+   "collected_date": "2026-11-15",
+   "commence_time": "2026-11-17T02:30:00Z",
+   "home_team": "Utah Mammoth",
+   "away_team": "Vancouver Canucks",
+   "market_home_prob": 0.7401,
+   "market_away_prob": 0.2599,
+   "n_bookmakers": 7,
+   "our_home_prob": null,
+   "actual_result": null
   }
  ]
 }
